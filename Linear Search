@@ -1,0 +1,45 @@
+/*
+Algorithm
+LINEAR_SEARCH(A, N, VAL)
+Step 1: [INITIALIZE] SET POS = -1
+Step 2: [INITIALIZE] SET I = 1
+Step 3: Repeat Step 4 while I<=N
+Step 4: IF A[I] = VAL
+SET POS = I
+PRINT POS
+Go to Step 6
+[END OF IF]
+SET I = I + 1
+[END OF LOOP]
+Step 5: IF POS = -1
+PRINT " VALUE IS NOT PRESENTIN THE ARRAY "
+[END OF IF]
+Step 6: EXIT
+*/
+
+#include<stdio.h>   
+void main ()  
+{  
+    int a[10] = {10, 23, 40, 1, 2, 0, 14, 13, 50, 9};  
+    int item, i,flag;  
+    printf("\nEnter Item which is to be searched\n");  
+    scanf("%d",&item);  
+    for (i = 0; i< 10; i++)  
+    {  
+        if(a[i] == item)   
+        {  
+            flag = i+1;  
+            break;  
+        }   
+        else   
+        flag = 0;  
+    }   
+    if(flag != 0)  
+    {  
+        printf("\nItem found at location %d\n",flag);  
+    }  
+    else  
+    {  
+        printf("\nItem not found\n");   
+    }  
+}   
